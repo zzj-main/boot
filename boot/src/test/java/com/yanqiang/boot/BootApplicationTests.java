@@ -3,10 +3,6 @@ package com.yanqiang.boot;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 @SpringBootTest
 class BootApplicationTests {
 
@@ -22,15 +18,15 @@ class BootApplicationTests {
 
         //java 快速排序 sort
         int [] mq ={5,2,3,9,1};
-        List list = new ArrayList();
-        for (int i = 0; i < mq.length; i++) {
-            list.add(mq[i]);
-        }
-        Collections.sort(list);
-        for (int i = 0; i <list.size() ; i++) {
-            System.out.println(list.get(i));
-        }
-        System.out.println();
+//        List list = new ArrayList();
+//        for (int i = 0; i < mq.length; i++) {
+//            list.add(mq[i]);
+//        }
+//        Collections.sort(list);
+//        for (int i = 0; i <list.size() ; i++) {
+//            System.out.println(list.get(i));
+//        }
+//        System.out.println();
 
         //冒泡排序
         for (int i = 0; i <mq.length-1 ; i++) {
@@ -42,7 +38,9 @@ class BootApplicationTests {
                 }
             }
         }
-
+        for (int i = 0; i < mq.length; i++) {
+            System.out.println(mq[i]);
+        }
     }
 
 }
