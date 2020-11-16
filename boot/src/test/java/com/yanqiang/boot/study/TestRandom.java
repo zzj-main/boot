@@ -18,7 +18,7 @@ public class TestRandom {
 //        System.out.println(randomNum+","+Math.random());
         //猜数字
         Random r = new Random();
-        int num = r.nextInt(100)+1;
+        int num = r.nextInt(100) + 1;
         while (true) {
             Scanner sc = new Scanner(System.in);
             System.out.println("请输入您的数字：");
