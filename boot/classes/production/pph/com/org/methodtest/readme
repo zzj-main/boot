@@ -1,0 +1,43 @@
+方法注意：
+方法不能嵌套定义
+void 表示无返回值 ，可以省略return ，也可以单独写return ，后面不加数据
+
+方法的通用格式
+    public statci 返回值类型 方法名（参数）{
+        方法体；
+        return 数据；
+    }
+注意事项
+    明确返回值类型
+    明确参数
+调用方法时
+    void 类型方法，直接调用即可。
+    非void类型方法，推荐用变量接收调用。
+
+方法参数传递
+    对于基本数据类型的参数，形式参数的改变，不影响实际参数的值。
+ public static void main(String[] args) {
+       int num = 100;
+       System.out.println(num);
+       change(num);
+       System.out.println(num);
+    }
+    public static void change(int num){
+        num = 200;
+    }
+  首次输出：100
+  原因：仅仅形参调用，并未赋值
+  二次输出：100
+    对于引用类型的参数，形式参数的改变，会影响实际参数的值。
+ public static void main(String[] args) {
+    int [] num = {1,10,100};
+    System.out.println(num[1]);
+    change(num);
+    System.out.println(num[1]);
+ }
+ public static void change(int [] arr){
+     arr[1] = 200;
+ }
+   首次输出：10
+   二次输出：200
+   原因，change方法修改堆内存中的值，导致num[1]的值改变
