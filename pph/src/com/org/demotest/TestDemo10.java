@@ -16,7 +16,7 @@ public class TestDemo10 {
         int[] arr = new int[6];
         //输入相关参数
         input(arr);
-        
+
         int sum = sumNum(arr) - getMax(arr) - getMin(arr);
         double devNum = (double)sum / (double)(arr.length - 2);
         System.out.println(devNum);
