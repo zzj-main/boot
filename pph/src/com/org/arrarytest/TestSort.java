@@ -1,13 +1,26 @@
 package com.org.arrarytest;
 
+import java.util.Scanner;
+
 public class TestSort {
     public static void main(String[] args) {
-        int[] arr = {55, 22, 23, 66, 11};
+        //让用户输入一个数组进行排序
+        int[] arr = new int[5];
+        getArray(arr);
         System.out.print("排序前：");
         printsort(arr);
         sort(arr);
         System.out.print("排序后：");
         printsort(arr);
+    }
+
+    public static void getArray(int[] arr){
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("请输入数字：");
+            int num = sc.nextInt();
+            arr[i] = num;
+        }
     }
 
     public static void sort(int[] arr){
