@@ -1,4 +1,4 @@
-package com.yanqiang.boot.controller;
+package com.yanqiang.boot.yanqiang;
 
 import com.yanqiang.boot.annotation.DoneTime;
 import org.springframework.web.bind.annotation.GetMapping;
